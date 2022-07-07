@@ -1,0 +1,4 @@
+/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/rebuild_cache.dir
+/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/edit_cache.dir
+/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/autoapp.dir
+/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/autoapp_autogen.dir

@@ -29,7 +29,6 @@ namespace autoapp
 namespace configuration
 {
 
-const std::string RecentAddressesList::cConfigFileName = "openauto_wifi_recent.ini";
 const std::string RecentAddressesList::cRecentEntiresCount = "Recent.EntiresCount";
 const std::string RecentAddressesList::cRecentEntryPrefix = "Recent.Entry_";
 
@@ -71,7 +70,7 @@ void RecentAddressesList::load()
 
     try
     {
-        boost::property_tree::ini_parser::read_ini(cConfigFileName, iniConfig);
+       // boost::property_tree::ini_parser::read_ini(cConfigFileName, iniConfig);
 
         const auto listSize = std::min(maxListSize_, iniConfig.get<size_t>(cRecentEntiresCount, 0));
 
@@ -88,9 +87,9 @@ void RecentAddressesList::load()
     }
     catch(const boost::property_tree::ini_parser_error& e)
     {
-        OPENAUTO_LOG(warning) << "[RecentAddressesList] failed to read configuration file: " << cConfigFileName
-                            << ", error: " << e.what()
-                            << ". Empty list will be used.";
+      //  OPENAUTO_LOG(warning) << "[RecentAddressesList] failed to read configuration file: " << cConfigFileName
+             //               << ", error: " << e.what()
+               //             << ". Empty list will be used.";
     }
 }
 
@@ -107,7 +106,7 @@ void RecentAddressesList::save()
         iniConfig.put<RecentAddresses::value_type>(key, list_.at(i));
     }
 
-    boost::property_tree::ini_parser::write_ini(cConfigFileName, iniConfig);
+   // boost::property_tree::ini_parser::write_ini(cConfigFileName, iniConfig);
 }
 
 }

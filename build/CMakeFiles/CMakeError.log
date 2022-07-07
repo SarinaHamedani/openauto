@@ -1,0 +1,348 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/sarina/Documents/openauto-BT&WIFI/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_77577/fast && /usr/bin/make -f CMakeFiles/cmTC_77577.dir/build.make CMakeFiles/cmTC_77577.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openauto-BT&WIFI/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_77577.dir/src.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_77577.dir/src.cxx.o -c "/home/sarina/Documents/openauto-BT&WIFI/openauto/build/CMakeFiles/CMakeTmp/src.cxx"
+Linking CXX executable cmTC_77577
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77577.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_77577.dir/src.cxx.o  -o cmTC_77577 
+/usr/bin/ld: CMakeFiles/cmTC_77577.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_77577.dir/build.make:87: cmTC_77577] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openauto-BT&WIFI/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_77577/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sarina/Documents/openauto-BT&WIFI/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_33af0/fast && /usr/bin/make -f CMakeFiles/cmTC_33af0.dir/build.make CMakeFiles/cmTC_33af0.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openauto-BT&WIFI/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_33af0.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_33af0.dir/CheckFunctionExists.cxx.o -c "/home/sarina/Documents/openauto-BT&WIFI/openauto/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx"
+Linking CXX executable cmTC_33af0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33af0.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_33af0.dir/CheckFunctionExists.cxx.o  -o cmTC_33af0  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_33af0.dir/build.make:87: cmTC_33af0] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openauto-BT&WIFI/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_33af0/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c1745/fast && /usr/bin/make -f CMakeFiles/cmTC_c1745.dir/build.make CMakeFiles/cmTC_c1745.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c1745.dir/src.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c1745.dir/src.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c1745
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1745.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_c1745.dir/src.cxx.o  -o cmTC_c1745 
+/usr/bin/ld: CMakeFiles/cmTC_c1745.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c1745.dir/build.make:87: cmTC_c1745] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c1745/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d11b7/fast && /usr/bin/make -f CMakeFiles/cmTC_d11b7.dir/build.make CMakeFiles/cmTC_d11b7.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d11b7.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d11b7.dir/CheckFunctionExists.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_d11b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d11b7.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d11b7.dir/CheckFunctionExists.cxx.o  -o cmTC_d11b7  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d11b7.dir/build.make:87: cmTC_d11b7] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d11b7/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0da77/fast && /usr/bin/make -f CMakeFiles/cmTC_0da77.dir/build.make CMakeFiles/cmTC_0da77.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0da77.dir/src.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_0da77.dir/src.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0da77
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0da77.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_0da77.dir/src.cxx.o  -o cmTC_0da77 
+/usr/bin/ld: CMakeFiles/cmTC_0da77.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_0da77.dir/build.make:87: cmTC_0da77] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_0da77/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_192b5/fast && /usr/bin/make -f CMakeFiles/cmTC_192b5.dir/build.make CMakeFiles/cmTC_192b5.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_192b5.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_192b5.dir/CheckFunctionExists.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_192b5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_192b5.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_192b5.dir/CheckFunctionExists.cxx.o  -o cmTC_192b5  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_192b5.dir/build.make:87: cmTC_192b5] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_192b5/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_eedc9/fast && /usr/bin/make -f CMakeFiles/cmTC_eedc9.dir/build.make CMakeFiles/cmTC_eedc9.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eedc9.dir/src.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_eedc9.dir/src.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_eedc9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eedc9.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_eedc9.dir/src.cxx.o  -o cmTC_eedc9 
+/usr/bin/ld: CMakeFiles/cmTC_eedc9.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_eedc9.dir/build.make:87: cmTC_eedc9] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_eedc9/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5d727/fast && /usr/bin/make -f CMakeFiles/cmTC_5d727.dir/build.make CMakeFiles/cmTC_5d727.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5d727.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5d727.dir/CheckFunctionExists.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_5d727
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d727.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5d727.dir/CheckFunctionExists.cxx.o  -o cmTC_5d727  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5d727.dir/build.make:87: cmTC_5d727] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_5d727/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2f5d1/fast && /usr/bin/make -f CMakeFiles/cmTC_2f5d1.dir/build.make CMakeFiles/cmTC_2f5d1.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2f5d1.dir/src.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2f5d1.dir/src.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2f5d1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f5d1.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_2f5d1.dir/src.cxx.o  -o cmTC_2f5d1 
+/usr/bin/ld: CMakeFiles/cmTC_2f5d1.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2f5d1.dir/build.make:87: cmTC_2f5d1] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_2f5d1/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8bbf1/fast && /usr/bin/make -f CMakeFiles/cmTC_8bbf1.dir/build.make CMakeFiles/cmTC_8bbf1.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8bbf1.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8bbf1.dir/CheckFunctionExists.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_8bbf1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bbf1.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8bbf1.dir/CheckFunctionExists.cxx.o  -o cmTC_8bbf1  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8bbf1.dir/build.make:87: cmTC_8bbf1] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8bbf1/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b7367/fast && /usr/bin/make -f CMakeFiles/cmTC_b7367.dir/build.make CMakeFiles/cmTC_b7367.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b7367.dir/src.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b7367.dir/src.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b7367
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7367.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b7367.dir/src.cxx.o  -o cmTC_b7367 
+/usr/bin/ld: CMakeFiles/cmTC_b7367.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b7367.dir/build.make:87: cmTC_b7367] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b7367/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_70eda/fast && /usr/bin/make -f CMakeFiles/cmTC_70eda.dir/build.make CMakeFiles/cmTC_70eda.dir/build
+make[1]: Entering directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_70eda.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_70eda.dir/CheckFunctionExists.cxx.o -c /home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_70eda
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70eda.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -pedantic -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_70eda.dir/CheckFunctionExists.cxx.o  -o cmTC_70eda  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_70eda.dir/build.make:87: cmTC_70eda] Error 1
+make[1]: Leaving directory '/home/sarina/Documents/openautoFinal/openauto/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_70eda/fast] Error 2
+
+
+
